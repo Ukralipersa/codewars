@@ -11,3 +11,10 @@
 // first(arr, 0) //=> [];
 
 //SOLUTION:
+function first(arr, n = 1) {
+  if (n == 0) {
+    return [];
+  } else {
+    return arr.slice(0, n);
+  }
+}
