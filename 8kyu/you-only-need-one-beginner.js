@@ -5,7 +5,7 @@
 
 // Return true if the array contains the value, false if not.
 
-//SOLUTION.
+//SOLUTION
 function check(a, x) {
   return a.includes(x);
 }
