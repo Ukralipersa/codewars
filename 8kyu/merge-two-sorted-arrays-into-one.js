@@ -4,3 +4,18 @@
 // You don't need to worry about validation, since arr1 and arr2 must be arrays with 0 or more Integers. If both arr1 and arr2 are empty, then just return an empty array.
 
 // Note: arr1 and arr2 may be sorted in different orders. Also arr1 and arr2 may have same integers. Remove duplicated in the returned result.
+
+//SOLUTION
+function mergeArrays(arr1, arr2) {
+	if (arr1.length === 0 && arr2.length === 0) {
+		return []
+	}
+	let arr = [...arr1, ...arr2]
+	arr.sort((a, b) => a - b)
+	for (let i = 0; i < arr.length; i++) {
+		if (arr[i] === arr[i + 1]) {
+			arr.splice(i, 1)
+		}
+	}
+	return arr
+}
